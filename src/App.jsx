@@ -14,9 +14,9 @@ function App() {
     console.log("tele", tele);
     console.log("tele.initData", tele.initData);
     const searchParams = new URLSearchParams(window.location.search);
-    const chatID = searchParams.get("chatID");
+    const idChat = searchParams.get("idChat");
     console.log("searchParams", searchParams);
-    console.log("chatID", chatID);
+    console.log("chatID", idChat);
     // tele.onUserAuthorized(function (user) {
     //   // Lấy tên người dùng
     //   const name = user.firstName + " " + user.lastName;
@@ -50,7 +50,7 @@ function App() {
   return (
     <>
       <div>{JSON.stringify(initDataUnsafe)}</div>
-      <>aaaaaa</>
+      <>Build lần 1</>
     </>
   );
 }

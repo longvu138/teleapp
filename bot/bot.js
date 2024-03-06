@@ -2,7 +2,7 @@ import { Telegraf } from "telegraf";
 
 const token = "6433254177:AAHbH9joDYkmGvMuF0hUwsemQF8BJsWIgoo";
 const bot = new Telegraf(token);
-const web_link = "https://teleapp-ochre.vercel.app/";
+const web_link = "https://teleapp-ochre.vercel.app";
 
 bot.start((ctx) => {
   console.log("ctx", ctx);
