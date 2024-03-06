@@ -4,29 +4,28 @@ import "./App.css";
 import { useWebAppInitDataUnsafe } from "@kloktunov/react-telegram-webapp";
 
 function App() {
-  // const tele = window.Telegram.WebApp;
-  // useEffect(() => {
-  //   tele.ready();
-  //   tele.expand();
-  //   tele.MainButton.text = "nhấn vào đây";
-  //   tele.MainButton.show();
-  //   console.log("tele.initDataUnsafe", tele.initDataUnsafe);
-  //   console.log(tele);
-  //   tele.onUserAuthorized(function(user) {
-  //     // Lấy tên người dùng
-  //     const name = user.firstName + ' ' + user.lastName;
+  const tele = window.Telegram.WebApp;
+  useEffect(() => {
+    tele.ready();
+    tele.expand();
+    tele.MainButton.text = "nhấn vào đây";
+    tele.MainButton.show();
+    console.log("tele.initDataUnsafe", tele.initDataUnsafe);
+    console.log("tele",tele);
+    // tele.onUserAuthorized(function (user) {
+    //   // Lấy tên người dùng
+    //   const name = user.firstName + " " + user.lastName;
 
-  //     // Lấy ID người dùng
-  //     const id = user.id;
+    //   // Lấy ID người dùng
+    //   const id = user.id;
 
-  //     // Lấy ảnh đại diện của người dùng
-  //     const photo = user.photoUrl;
+    //   // Lấy ảnh đại diện của người dùng
+    //   const photo = user.photoUrl;
 
-  //     // Hiển thị thông tin người dùng
-  //     console.log(name, id, photo);
-  //   });
-
-  // }, []);
+    //   // Hiển thị thông tin người dùng
+    //   console.log(name, id, photo);
+    // });
+  }, []);
 
   // const onCheckout = () => {
   //   tele.MainButton.text = "nhấn vào đây";
@@ -43,7 +42,12 @@ function App() {
 
   const initDataUnsafe = useWebAppInitDataUnsafe();
   console.log("initDataUnsafe", initDataUnsafe);
-  return <div>{JSON.stringify(initDataUnsafe)}</div>;
+  return (
+    <>
+      <div>{JSON.stringify(initDataUnsafe)}</div>
+      <>aaaaaa</>
+    </>
+  );
 }
 
 export default App;
