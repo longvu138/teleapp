@@ -8,11 +8,15 @@ function App() {
   useEffect(() => {
     tele.ready();
     tele.expand();
-    tele.MainButton.text = "nhấn vào đây";
-    tele.MainButton.show();
+    // tele.MainButton.text = "nhấn vào đây";
+    // tele.MainButton.show();
     console.log("tele.initDataUnsafe", tele.initDataUnsafe);
-    console.log("tele",tele);
-    console.log("tele.initData",tele.initData);
+    console.log("tele", tele);
+    console.log("tele.initData", tele.initData);
+    const searchParams = new URLSearchParams(window.location.search);
+    const chatID = searchParams.get("chatID");
+    console.log("searchParams", searchParams);
+    console.log("chatID", chatID);
     // tele.onUserAuthorized(function (user) {
     //   // Lấy tên người dùng
     //   const name = user.firstName + " " + user.lastName;

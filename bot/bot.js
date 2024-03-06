@@ -10,19 +10,18 @@ bot.start((ctx) => {
   console.log("ctx.chat", ctx.chat);
   console.log("ctx.entities", ctx.entities);
   // Lấy username và ID người dùng
-  const username = ctx.from.username;
-  const id = ctx.from.id;
-  console.log(`Username: ${username}`);
-  console.log(`ID: ${id}`);
-
+  const first_name = ctx.from.first_name;
+  const last_name = ctx.from.last_name;
+  const botName = ctx.botInfo.username
+  const idChat = ctx.chat.id
   // Sử dụng markup để tạo liên kết mini-app
   const keyboardMarkup = {
     reply_markup: {
       inline_keyboard: [
         [
           {
-            text: "🔴 Click me open app",
-            web_app: { url: web_link },
+            text: `Xin chào ${first_name} ${last_name} 🔴 Click me open app`,
+            web_app: { url: web_link +`?idChat=${idChat}`},
           },
         ],
       ],
@@ -30,7 +29,7 @@ bot.start((ctx) => {
   };
 
   return ctx.reply(
-    "Welcome ahihi chạy rùi nè Click để mở web app nè",
+    `Chào mừng đến với ${botName}, nhấn vào đây để tiếp tục`,
     keyboardMarkup
   );
 });
