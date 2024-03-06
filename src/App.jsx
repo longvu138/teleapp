@@ -12,6 +12,7 @@ function App() {
     tele.MainButton.show();
     console.log("tele.initDataUnsafe", tele.initDataUnsafe);
     console.log("tele",tele);
+    console.log("tele.initData",tele.initData);
     // tele.onUserAuthorized(function (user) {
     //   // Lấy tên người dùng
     //   const name = user.firstName + " " + user.lastName;
